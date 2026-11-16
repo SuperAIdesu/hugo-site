@@ -25,9 +25,12 @@ image = ""
 about = "TODO: an about section"
 
 [params]
-# Name of a file in static/skins/ without the ".css" extension
+# Name of a file in the theme's static/skins/ without the ".css" extension
 # Available: breeze, catppuccin, macintosh, cloudy-day, minimal
 skin = "catppuccin"
+# Sections shown in the home feed, newest first. Other sections (experience,
+# projects, talks) get their own pages and are excluded from the feed.
+mainSections = ["posts"]
 
 #
 # Totally optional cool stuff (see README for details)
@@ -47,6 +50,22 @@ skin = "catppuccin"
 # githubuser = "chihiro"
 # twitteruser = "chihiro" # no @ in front
 # mastodon = "https://mastodon.technology/@chihiro" # full link to your instance profile
+
+# Site navigation. Entries are rendered in the header, sorted by weight.
+[[menus.main]]
+name = "Experience"
+pageRef = "/experience"
+weight = 10
+
+[[menus.main]]
+name = "Projects"
+pageRef = "/projects"
+weight = 20
+
+[[menus.main]]
+name = "Talks"
+pageRef = "/talks"
+weight = 30
 
 [permalinks]
 # Format for feed entry links. You probably don't need to change this.
