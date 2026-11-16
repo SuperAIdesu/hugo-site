@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostalgia on Neofeed</title>
+    <link>http://localhost:1313/tags/nostalgia/</link>
+    <description>Read the latest  Nostalgia on Neofeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Aug 2021 11:34:50 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/nostalgia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>eaccfa05-ed3f-4158-af92-59df01a60543</title>
+      <link>http://localhost:1313/posts/eaccfa05-ed3f-4158-af92-59df01a60543/</link>
+      <pubDate>Sun, 08 Aug 2021 11:34:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/eaccfa05-ed3f-4158-af92-59df01a60543/</guid>
+      <description>&lt;p&gt;Once you&amp;rsquo;ve met someone you never really forget them. It just takes a while for your memories to return.&lt;/p&gt;
+&lt;p&gt;
+&lt;img class=&#34;enclosure&#34; src=&#34;posts/zeniba.jpeg&#34; alt=&#34;Dinner at Zeniba&amp;rsquo;s&#34;  /&gt;
+&lt;/p&gt;</description>
+      <content:encoded>
+        <![CDATA[ <p>Once you&rsquo;ve met someone you never really forget them. It just takes a while for your memories to return.</p>
+<p>
+<img class="enclosure" src="posts/zeniba.jpeg" alt="Dinner at Zeniba&rsquo;s"  />
+</p>
+ ]]>
+      </content:encoded>
+    </item>
+    
+  </channel>
+</rss>

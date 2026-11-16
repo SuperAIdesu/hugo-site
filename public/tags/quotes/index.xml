@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Quotes on Neofeed</title>
+    <link>http://localhost:1313/tags/quotes/</link>
+    <description>Read the latest  Quotes on Neofeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Aug 2021 11:34:19 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/quotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ade8b85b-16ac-437b-b55c-1f1a622f07ec</title>
+      <link>http://localhost:1313/posts/ade8b85b-16ac-437b-b55c-1f1a622f07ec/</link>
+      <pubDate>Sun, 08 Aug 2021 11:34:19 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/ade8b85b-16ac-437b-b55c-1f1a622f07ec/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m see-through!&lt;/p&gt;</description>
+      <content:encoded>
+        <![CDATA[ <p>I&rsquo;m see-through!</p>
+ ]]>
+      </content:encoded>
+    </item>
+    
+  </channel>
+</rss>
