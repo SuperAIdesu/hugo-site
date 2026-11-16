@@ -1,6 +1,6 @@
 # Your full site URL. Example:
 # "https://<username>.neocities.org/"
-baseURL = "https://example.com/"
+baseURL = "https://kei.sbeam.dev/"
 locale = "en-us"
 # Title of your site
 title = "Neofeed"
@@ -17,12 +17,12 @@ unsafe = true
 tag = "tags"
 
 [params.author]
-name = "Chihiro Ogino" # Your online name
+name = "Kei Tang" # Your online name
 # Your profile image. External link or relative to static/. Examples:
 # "https://imgur.com/123456788"
 # "image/me.webp"
 image = ""
-about = "I'm dreaming, I'm dreaming! Come on, wake up! Wake up! Wake up..."
+about = "TODO: an about section"
 
 [params]
 # Name of a file in static/skins/ without the ".css" extension
