@@ -262,6 +262,46 @@
 }
 
 /* --------------------------------------------------------------------------
+ * About card social links
+ * ------------------------------------------------------------------------ */
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-secondary) 25%, transparent);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    color: var(--color-secondary);
+    background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-secondary) 42%, transparent);
+    border-radius: var(--border-radius);
+    transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.social-icon {
+    width: 17px;
+    height: 17px;
+    flex: none;
+}
+
+/* --------------------------------------------------------------------------
  * Responsive
  * ------------------------------------------------------------------------ */
 

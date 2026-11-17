@@ -34,6 +34,28 @@ customCSS = "css/sections.css"
 # projects, talks) get their own pages and are excluded from the timeline.
 mainSections = ["posts"]
 
+# Social links rendered as icon buttons in the about card.
+# TODO: replace the LinkedIn and WriteFreely URLs with your own profiles.
+[[params.social]]
+name = "Tangled"
+url = "https://tangled.org/superaidesu.tngl.sh"
+icon = "tangled"
+
+[[params.social]]
+name = "GitHub"
+url = "https://github.com/SuperAIdesu"
+icon = "github"
+
+[[params.social]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/kei-t-200204234/"
+icon = "linkedin"
+
+[[params.social]]
+name = "WriteFreely"
+url = "https://writee.org/superai/"
+icon = "writefreely"
+
 #
 # Totally optional cool stuff (see README for details)
 #
