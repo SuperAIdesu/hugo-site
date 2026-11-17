@@ -1,7 +1,6 @@
 ---
 title: Talks
-description: Conference and meetup talks.
+description: Talks and workshops on AI, systems, Rust, and typography.
 ---
 
-Slides and recordings for talks I have given. Replace this intro in
-`content/talks/_index.md`.
+Talks and workshops I have given, with slides.

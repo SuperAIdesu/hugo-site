@@ -3,7 +3,7 @@
 baseURL = "https://kei.sbeam.dev/"
 locale = "en-us"
 # Title of your site
-title = "Neofeed"
+title = "Kei's site"
 # Theme (must match the folder name under themes/)
 theme = "neofeed"
 # How many feed entries to load at once
@@ -21,7 +21,7 @@ name = "Kei Tang" # Your online name
 # Your profile image. External link or relative to static/. Examples:
 # "https://imgur.com/123456788"
 # "image/me.webp"
-image = ""
+image = "https://files.seeusercontent.com/2026/11/17/ey2B/smaller_0807.jpg"
 about = "TODO: an about section"
 
 [params]
@@ -81,4 +81,4 @@ feed = "/:title/"
 
 [outputs]
 # Output formats for your feed. You probably don't need to change this.
-  home = ["HTML", "RSS"]
+home = ["HTML", "RSS"]
