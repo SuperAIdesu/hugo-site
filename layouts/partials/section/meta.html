@@ -1,0 +1,44 @@
+{{- /*
+  Renders the metadata line shared by section list entries and detail pages.
+
+  Context: dict
+    page      page
+    dateFormat Go date layout passed to section/period
+    showRange  whether to show an end date
+    class      CSS class for the wrapping paragraph
+*/ -}}
+{{- $page := .page -}}
+{{- $format := .dateFormat | default "Jan 2006" -}}
+{{- $showRange := .showRange | default false -}}
+{{- $class := .class | default "section-meta" -}}
+{{- $hasMeta := or
+    (not $page.Date.IsZero)
+    $page.Params.company
+    $page.Params.location
+    $page.Params.employment
+    $page.Params.event
+    $page.Params.venue
+-}}
+{{- if $hasMeta -}}
+<p class="{{ $class }}">
+    {{ partial "section/period" (dict "page" $page "dateFormat" $format "showRange" $showRange) }}
+    {{ with $page.Params.company }}
+    <span class="section-meta__item">
+        {{ $company := . }}
+        {{ with $page.Params.website }}<a href="{{ . }}">{{ $company }}</a>{{ else }}{{ $company }}{{ end }}
+    </span>
+    {{ end }}
+    {{ with $page.Params.location }}
+    <span class="section-meta__item">{{ . }}</span>
+    {{ end }}
+    {{ with $page.Params.employment }}
+    <span class="section-meta__item">{{ . }}</span>
+    {{ end }}
+    {{ with $page.Params.event }}
+    <span class="section-meta__item">{{ . }}</span>
+    {{ end }}
+    {{ with $page.Params.venue }}
+    <span class="section-meta__item">{{ . }}</span>
+    {{ end }}
+</p>
+{{- end -}}

@@ -1,0 +1,41 @@
+{{- /*
+  One section entry rendered as a KDE window in a section list.
+
+  Context: dict
+    page      page
+    dateFormat Go date layout for the metadata line
+    showRange  whether to show an end date
+*/ -}}
+{{- $page := .page -}}
+{{- $format := .dateFormat | default "Jan 2006" -}}
+{{- $showRange := .showRange | default false -}}
+{{- $section := $page.CurrentSection -}}
+<div class="window section-entry" data-window-title="{{ $section.Title }}">
+    <div class="section-entry__heading">
+        <h2 class="section-entry__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+        {{ with $page.Params.status }}
+        <span class="section-status">{{ . }}</span>
+        {{ end }}
+    </div>
+    {{ partial "section/meta" (dict "page" $page "dateFormat" $format "showRange" $showRange "class" "section-entry__meta") }}
+    {{ with $page.Params.summary }}
+    <p class="section-entry__summary">{{ . }}</p>
+    {{ else }}
+    {{ with $page.Summary }}
+    <div class="md section-entry__summary">{{ . }}</div>
+    {{ end }}
+    {{ end }}
+    {{ with $page.Params.tech }}
+    <ul class="section-chips" aria-label="Technologies">
+        {{ range . }}<li class="section-chip">{{ . }}</li>{{ end }}
+    </ul>
+    {{ end }}
+    <div class="section-links">
+        {{ with $page.Params.website }}<a class="section-link" href="{{ . }}">Website</a>{{ end }}
+        {{ with $page.Params.repo }}<a class="section-link" href="{{ . }}">Code</a>{{ end }}
+        {{ with $page.Params.demo }}<a class="section-link" href="{{ . }}">Live</a>{{ end }}
+        {{ with $page.Params.slides }}<a class="section-link" href="{{ . }}">Slides</a>{{ end }}
+        {{ with $page.Params.video }}<a class="section-link" href="{{ . }}">Video</a>{{ end }}
+        <a class="section-link" href="{{ $page.RelPermalink }}">Details</a>
+    </div>
+</div>

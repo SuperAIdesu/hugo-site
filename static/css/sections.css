@@ -1,0 +1,320 @@
+/* Site-owned section pages: experience, projects, talks.
+ *
+ * Section front matter, layouts and these styles live in the site repository.
+ * The neofeed theme only provides the generic .window component and the
+ * task-manager header; colors come from the active breeze/catppuccin skin.
+ */
+
+.section-main,
+.section-main *,
+.section-main *::before,
+.section-main *::after {
+    box-sizing: border-box;
+}
+
+.section-page {
+    width: 100%;
+    margin: 2rem 0 0;
+}
+
+.section-page--single {
+    margin-bottom: 0;
+}
+
+/* Section layouts own window placement; the theme's base margin is for feeds. */
+.section-main .window {
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+ * Section header panel
+ * ------------------------------------------------------------------------ */
+
+.section-header {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: var(--color-bg);
+    border: 1px solid color-mix(in srgb, var(--color-secondary) 40%, transparent);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-shape) var(--color-shadow);
+}
+
+.section-title {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: calc(1.7rem * var(--scale));
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-intro {
+    margin-top: 0.4rem;
+    color: var(--color-secondary);
+    font-size: calc(0.92rem * var(--scale));
+}
+
+.section-intro p {
+    padding-top: 0.35rem !important;
+}
+
+.section-intro p:last-child {
+    padding-bottom: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+ * Entry list
+ * ------------------------------------------------------------------------ */
+
+.section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section-entry-item {
+    min-width: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.section-empty {
+    width: 100%;
+    margin: 1.25rem 0 0;
+    padding: 1.25rem;
+    background: var(--color-bg);
+    border: 1px solid color-mix(in srgb, var(--color-secondary) 40%, transparent);
+    border-radius: var(--border-radius);
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+ * Entry contents (inside a .window)
+ * ------------------------------------------------------------------------ */
+
+.section-entry__heading,
+.section-detail__heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.section-entry__title {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: calc(1.15rem * var(--scale));
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.section-entry__title a {
+    color: inherit;
+}
+
+.section-entry__title a:hover {
+    color: var(--accent);
+}
+
+.section-detail__title {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: calc(1.45rem * var(--scale));
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.section-entry__meta,
+.section-detail__meta {
+    margin: 0.4rem 0 0;
+    color: var(--color-secondary);
+    font-size: calc(0.8rem * var(--scale));
+}
+
+.section-meta__item + .section-meta__item::before {
+    content: "·";
+    margin: 0 0.45rem;
+    color: var(--color-secondary);
+}
+
+.section-meta__sep {
+    margin: 0 0.25rem;
+}
+
+.section-meta__item a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+    text-underline-offset: 0.18rem;
+}
+
+.section-meta__item a:hover {
+    color: var(--accent);
+}
+
+.section-entry__summary,
+.section-detail__summary {
+    margin: 0.65rem 0 0;
+    color: var(--color-primary);
+    font-size: calc(0.92rem * var(--scale));
+    line-height: 1.55;
+}
+
+.section-entry__summary.md p,
+.section-entry__summary.md ul,
+.section-entry__summary.md ol {
+    padding-top: 0 !important;
+}
+
+.section-entry__summary.md p:last-child {
+    padding-bottom: 0 !important;
+}
+
+.section-status {
+    padding: 1px 8px;
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+    border-radius: 999px;
+    color: var(--color-primary);
+    font-size: calc(0.7rem * var(--scale));
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+ * Chips and links
+ * ------------------------------------------------------------------------ */
+
+.section-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section-chip {
+    padding: 1px 8px;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    border-radius: 999px;
+    color: var(--color-primary);
+    font-size: calc(0.7rem * var(--scale));
+    line-height: 1.6;
+}
+
+.section-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+}
+
+.section-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 2px 9px;
+    background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-secondary) 45%, transparent);
+    border-radius: var(--border-radius);
+    color: var(--color-primary);
+    font-size: calc(0.75rem * var(--scale));
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section-link:hover {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-color: var(--accent);
+    color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+ * Detail page
+ * ------------------------------------------------------------------------ */
+
+.section-back {
+    margin: 0 0 0.85rem;
+    padding: 0;
+}
+
+.section-back__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 28px;
+    padding: 2px 9px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    color: var(--color-primary);
+    font-size: calc(0.78rem * var(--scale));
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section-back__link:hover {
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    color: var(--color-primary);
+}
+
+.section-icon {
+    width: 14px;
+    height: 14px;
+    flex: none;
+}
+
+.section-content {
+    margin-top: 0.5rem;
+    color: var(--color-primary);
+}
+
+.section-content > :first-child {
+    padding-top: 0 !important;
+}
+
+.section-content p:last-child {
+    padding-bottom: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+ * Responsive
+ * ------------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .section-page {
+        margin-top: 1.5rem;
+    }
+
+    .section-header {
+        padding: 0.9rem 1rem;
+    }
+
+    .section-title {
+        font-size: calc(1.45rem * var(--scale));
+    }
+
+    .section-detail__title {
+        font-size: calc(1.25rem * var(--scale));
+    }
+}
+
+@media (max-width: 414px) {
+    .section-header {
+        padding: 0.8rem 0.9rem;
+    }
+
+    .section-links {
+        gap: 0.3rem;
+    }
+
+    .section-link {
+        min-height: 26px;
+        padding: 2px 7px;
+    }
+}

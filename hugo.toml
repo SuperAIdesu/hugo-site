@@ -25,15 +25,19 @@ image = ""
 about = "TODO: an about section"
 
 [params]
-# Name of a file in static/skins/ without the ".css" extension
+# Name of a file in the theme's static/skins/ without the ".css" extension
 # Available: breeze, catppuccin, macintosh, cloudy-day, minimal
 skin = "catppuccin"
+# Site-owned stylesheet loaded after the skin, relative to ./static/
+customCSS = "css/sections.css"
+# Sections shown in the home feed, newest first. Other sections (experience,
+# projects, talks) get their own pages and are excluded from the timeline.
+mainSections = ["posts"]
 
 #
 # Totally optional cool stuff (see README for details)
 #
 # socialImage = "static/img/social.png" # site image for rich embeds
-# customCSS = "css/style.css" # relative to ./static/
 # plausible = true
 # paymentPointer = "$wallet.provider.com/myspecialid123"
 # webmentionUrl = "https://webmention.io/example/webmention"
@@ -48,10 +52,33 @@ skin = "catppuccin"
 # twitteruser = "chihiro" # no @ in front
 # mastodon = "https://mastodon.technology/@chihiro" # full link to your instance profile
 
+# Site navigation. Entries render as a Plasma task manager in the header,
+# sorted by weight. The icon name refers to a Breeze icon in the theme.
+[[menus.main]]
+name = "Experience"
+pageRef = "/experience"
+weight = 10
+  [menus.main.params]
+  icon = "calendar"
+
+[[menus.main]]
+name = "Projects"
+pageRef = "/projects"
+weight = 20
+  [menus.main.params]
+  icon = "folder"
+
+[[menus.main]]
+name = "Talks"
+pageRef = "/talks"
+weight = 30
+  [menus.main.params]
+  icon = "presentation"
+
 [permalinks]
 # Format for feed entry links. You probably don't need to change this.
 feed = "/:title/"
 
 [outputs]
 # Output formats for your feed. You probably don't need to change this.
-  home = ["HTML", "JSON", "RSS"]
+  home = ["HTML", "RSS"]

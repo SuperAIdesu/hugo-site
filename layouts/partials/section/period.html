@@ -1,0 +1,25 @@
+{{- /*
+  Renders one date or date range for a section entry.
+
+  Context: dict
+    page      page
+    dateFormat Go date layout (default "Jan 2006")
+    showRange  append the end date, or "Present" when endDate is empty
+*/ -}}
+{{- $page := .page -}}
+{{- $format := .dateFormat | default "Jan 2006" -}}
+{{- $showRange := .showRange | default false -}}
+{{- if not $page.Date.IsZero -}}
+<span class="section-meta__item">
+    <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format $format }}</time>
+    {{- if $showRange }}
+    <span class="section-meta__sep">–</span>
+        {{- with $page.Params.endDate }}
+            {{- $end := time.AsTime . }}
+    <time datetime="{{ $end.Format "2006-01-02" }}">{{ $end.Format $format }}</time>
+        {{- else }}
+    <span>Present</span>
+        {{- end }}
+    {{- end }}
+</span>
+{{- end -}}

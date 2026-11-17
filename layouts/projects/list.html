@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="section-main">
+    <section class="section-page">
+        {{ partial "section/header" . }}
+        <div class="section-list">
+            {{ range .Pages.ByDate.Reverse }}
+            <div class="section-entry-item">
+                {{ partial "section/entry" (dict "page" . "dateFormat" "2006" "showRange" false) }}
+            </div>
+            {{ else }}
+            <p class="section-empty">Nothing here yet.</p>
+            {{ end }}
+        </div>
+    </section>
+</main>
+{{ end }}
