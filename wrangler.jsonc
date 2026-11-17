@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  // Worker name. Must match the project name in the Cloudflare dashboard.
+  "name": "kei-hugo-site",
+  "compatibility_date": "2026-11-17",
+  // Hugo is built by Wrangler itself (deploy and dev), so the dashboard
+  // "Build command" stays empty and local builds match CI builds.
+  "build": {
+    "command": "chmod a+x build.sh && ./build.sh"
+  },
+  "assets": {
+    "directory": "./public",
+    // Hugo writes pretty URLs as directory indexes; serve /foo/ and
+    // redirect /foo -> /foo/.
+    "html_handling": "auto-trailing-slash",
+    // Serve the nearest 404.html with a real 404 status.
+    "not_found_handling": "404-page"
+  }
+}

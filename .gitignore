@@ -1,2 +1,5 @@
 # not commiting the built public dir
 public/
+# build and tool caches
+.cache/
+.wrangler/
