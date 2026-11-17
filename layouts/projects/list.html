@@ -1,7 +1,6 @@
 {{ define "main" }}
-<main class="section-main">
+<main class="section-main" aria-label="{{ .Title }}">
     <section class="section-page">
-        {{ partial "section/header" . }}
         <div class="section-list">
             {{ range .Pages.ByDate.Reverse }}
             <div class="section-entry-item">

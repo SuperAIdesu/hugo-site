@@ -1,11 +1,10 @@
 {{ define "main" }}
-<main class="section-main">
+<main class="section-main" aria-label="{{ .Title }}">
     <section class="section-page">
-        {{ partial "section/header" . }}
         <ol class="section-list">
             {{ range .Pages.ByDate.Reverse }}
             <li class="section-entry-item">
-                {{ partial "section/entry" (dict "page" . "dateFormat" "Jan 2006" "showRange" true) }}
+                {{ partial "section/entry" (dict "page" . "dateFormat" "Jan 2006" "showRange" true "hideWebsite" true) }}
             </li>
             {{ else }}
             <li class="section-empty">Nothing here yet.</li>

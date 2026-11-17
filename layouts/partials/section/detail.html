@@ -35,9 +35,14 @@
             </ul>
             {{ end }}
             <div class="section-links">
+                {{ if not .hideWebsite }}
                 {{ with $page.Params.website }}<a class="section-link" href="{{ . }}">Website</a>{{ end }}
-                {{ with $page.Params.repo }}<a class="section-link" href="{{ . }}">Code</a>{{ end }}
-                {{ with $page.Params.demo }}<a class="section-link" href="{{ . }}">Live</a>{{ end }}
+                {{ end }}
+                {{ with $page.Params.repo }}<a class="section-link" href="{{ . }}">Source Code</a>{{ end }}
+                {{ with $page.Params.release }}<a class="section-link" href="{{ . }}">Release</a>{{ end }}
+                {{ with $page.Params.demo }}<a class="section-link" href="{{ . }}">Demo</a>{{ end }}
+                {{ with $page.Params.paper }}<a class="section-link" href="{{ . }}">Publication</a>{{ end }}
+                {{ with $page.Params.poster }}<a class="section-link" href="{{ . }}">Poster</a>{{ end }}
                 {{ with $page.Params.slides }}<a class="section-link" href="{{ . }}">Slides</a>{{ end }}
                 {{ with $page.Params.video }}<a class="section-link" href="{{ . }}">Video</a>{{ end }}
             </div>

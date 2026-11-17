@@ -27,41 +27,6 @@
 }
 
 /* --------------------------------------------------------------------------
- * Section header panel
- * ------------------------------------------------------------------------ */
-
-.section-header {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    background: var(--color-bg);
-    border: 1px solid color-mix(in srgb, var(--color-secondary) 40%, transparent);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-shape) var(--color-shadow);
-}
-
-.section-title {
-    margin: 0;
-    color: var(--color-primary);
-    font-size: calc(1.7rem * var(--scale));
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.section-intro {
-    margin-top: 0.4rem;
-    color: var(--color-secondary);
-    font-size: calc(0.92rem * var(--scale));
-}
-
-.section-intro p {
-    padding-top: 0.35rem !important;
-}
-
-.section-intro p:last-child {
-    padding-bottom: 0 !important;
-}
-
-/* --------------------------------------------------------------------------
  * Entry list
  * ------------------------------------------------------------------------ */
 
@@ -70,7 +35,7 @@
     flex-direction: column;
     gap: 1.25rem;
     width: 100%;
-    margin: 1.25rem 0 0;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -83,7 +48,7 @@
 
 .section-empty {
     width: 100%;
-    margin: 1.25rem 0 0;
+    margin: 0;
     padding: 1.25rem;
     background: var(--color-bg);
     border: 1px solid color-mix(in srgb, var(--color-secondary) 40%, transparent);
@@ -270,16 +235,30 @@
 }
 
 .section-content {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     color: var(--color-primary);
 }
 
 .section-content > :first-child {
+    margin-top: 0;
     padding-top: 0 !important;
 }
 
-.section-content p:last-child {
+.section-content > p:last-child,
+.section-content > ul:last-child,
+.section-content > ol:last-child {
+    margin-bottom: 0;
     padding-bottom: 0 !important;
+}
+
+.section-content ul,
+.section-content ol {
+    margin: 0 0 0.75rem;
+    padding: 0.5rem 0 0.25rem 2rem;
+}
+
+.section-content li {
+    margin: 0.2rem 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -291,24 +270,12 @@
         margin-top: 1.5rem;
     }
 
-    .section-header {
-        padding: 0.9rem 1rem;
-    }
-
-    .section-title {
-        font-size: calc(1.45rem * var(--scale));
-    }
-
     .section-detail__title {
         font-size: calc(1.25rem * var(--scale));
     }
 }
 
 @media (max-width: 414px) {
-    .section-header {
-        padding: 0.8rem 0.9rem;
-    }
-
     .section-links {
         gap: 0.3rem;
     }
