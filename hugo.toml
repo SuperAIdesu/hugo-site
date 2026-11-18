@@ -18,11 +18,12 @@ tag = "tags"
 
 [params.author]
 name = "Kei Tang" # Your online name
+pronouns = "they/she"
 # Your profile image. External link or relative to static/. Examples:
 # "https://imgur.com/123456788"
 # "image/me.webp"
 image = "https://files.seeusercontent.com/2026/11/17/ey2B/smaller_0807.jpg"
-about = "TODO: an about section"
+about = "AI scientist and ML engineer in New York." # Fallback used only when author/about.md is missing
 
 [params]
 # Name of a file in the theme's static/skins/ without the ".css" extension
