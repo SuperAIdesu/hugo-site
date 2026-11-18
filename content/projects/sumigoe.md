@@ -20,3 +20,5 @@ release: https://github.com/sbeam-dev/sumigoe
 - **In-app recording and playback**
 - **Cross-platform**: Supports Linux, Windows, macOS, and Android.
 - **Fully local and private**: ML models are bundled with the app and all analysis runs locally, Internet is not needed at all.
+
+**[Presentation on how I built it]({{< relref "talks/how-sumigoe-was-built.md" >}})**
