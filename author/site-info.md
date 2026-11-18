@@ -1,0 +1,1 @@
+This site is built with [Hugo](https://gohugo.io/) and the [Neofeed](https://neofeed.dev) theme. The style of this site is inspired by my KDE desktop environment, with [Breeze](https://github.com/kde/breeze) theme and [Catppuccin](https://catppuccin.com/) color palette.
