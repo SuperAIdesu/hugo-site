@@ -14,7 +14,9 @@
     <div class="section-entry__heading">
         <h2 class="section-entry__title"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
         {{ with $page.Params.status }}
-        <span class="section-status">{{ . }}</span>
+        <span class="section-status section-status--{{ . | urlize }}">
+            <span class="section-visually-hidden">Status: </span>{{ . }}
+        </span>
         {{ end }}
     </div>
     {{ partial "section/meta" (dict "page" $page "dateFormat" $format "showRange" $showRange "class" "section-entry__meta") }}

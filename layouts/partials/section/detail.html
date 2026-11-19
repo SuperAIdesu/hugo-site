@@ -22,7 +22,9 @@
             <div class="section-detail__heading">
                 <h1 class="section-detail__title">{{ $page.Title }}</h1>
                 {{ with $page.Params.status }}
-                <span class="section-status">{{ . }}</span>
+                <span class="section-status section-status--{{ . | urlize }}">
+                    <span class="section-visually-hidden">Status: </span>{{ . }}
+                </span>
                 {{ end }}
             </div>
             {{ partial "section/meta" (dict "page" $page "dateFormat" $format "showRange" $showRange "class" "section-detail__meta") }}
